@@ -16,14 +16,15 @@ function Box(props) {
         </div>
 
         <div className="content">
-          <div>{item.content}</div>
-          {(item.date || item.place) && <div className="separator"></div>}
+          {item.content && <div>{item.content}</div>}
+          {(item.content && (item.date || item.place)) && <div className="separator"></div>}
           {item.date && <div>Date: {item.date}</div>}
           {item.place && <div>Place: {item.place}</div>}          
         </div>
 
         <div className="options">
           <button type="button">Make</button>
+          <button type="button">Edit</button>
           <button type="button">Archieve</button>
           <button type="button">Delete</button>
         </div>

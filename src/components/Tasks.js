@@ -12,8 +12,25 @@ const tasks = [
     id: 2,
     title: 'Run Runmageddon',
     content: 'We would like to participate in Runmageddon Silesia wit Sopra Steria team. https://www.runmageddon.pl/imprezy/runmageddon-silesia-jsw-s-a-31-08-2019',
-    date: '31.08.2019',
+    date: '31 August (in 3 months)',
     place: 'Górnicza 1, 44-193 Knurów',
+  },
+  {
+    id: 3,
+    title: 'Play match',
+    content: null,
+    date: '17:00, 4 June (in 4 days)',
+    place: 'Będzin',
+  },
+  {
+    id: 4,
+    title: 'Buy some things to put on the balcony',
+  },
+  {
+    id: 3,
+    title: 'Buy some things for dinner',
+    content: null,
+    date: '31.05 (today)',
   },
 ]
 
