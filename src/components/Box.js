@@ -1,38 +1,34 @@
 import React from 'react';
 import './Box.scss';
 
-const tasks = [
-  {
-    title: 'Make a coffee',
-    content: 'Maybe we should confider making stronger coffee with less milk so we could be awake earlier and absorb less fat and calories',
-    date: '1 hour ago',
-  }
-]
+function Box(props) {
+  const { item } = props;
 
-function Box() {
-  return (<>
-    {tasks.map(task => <div className="Box">
+  return (
+    <div className="Box" key={item.key}>
       <div className="Box__header">
-        Task: {task.title}
+        Task
       </div>
 
       <div className="Box__body">
         <div className="title">
-          <h2>{task.title}</h2>
+          <h2>{item.title}</h2>
         </div>
 
         <div className="content">
-          <span>{task.content}</span>
+          <div>{item.content}</div>
+          {(item.date || item.place) && <div className="separator"></div>}
+          {item.date && <div>Date: {item.date}</div>}
+          {item.place && <div>Place: {item.place}</div>}          
         </div>
 
         <div className="options">
-          <button type="button">Done</button>
+          <button type="button">Make</button>
           <button type="button">Archieve</button>
           <button type="button">Delete</button>
         </div>
       </div>
     </div>
-    )}</>
   );
 }
 

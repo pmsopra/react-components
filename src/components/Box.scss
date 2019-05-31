@@ -1,9 +1,10 @@
 $color: #dadada;
 
 .Box {
-  width: 400px;
+  width: 600px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .Box__header {
@@ -15,19 +16,19 @@ $color: #dadada;
   border-color: #3e4040;
   display: flex;
   box-sizing: border-box;
-  font-size: .75rem;
+  font-size: 0.75rem;
   color: #dadada;
 }
 
 .Box__body {
-  background-image: linear-gradient(#424445, #171819);
+  background-image: linear-gradient(#424445, #2f3032);
   width: 100%;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   padding: 1rem 1.5rem;
   border-color: #3e4040;
   box-sizing: border-box;
-  color: #DDDDDD;
+  color: #dddddd;
 
   h2 {
     margin-top: 0;
@@ -37,19 +38,31 @@ $color: #dadada;
     font-size: 0.75rem;
     margin: 1.5rem 0;
   }
-  
+
   .options {
     display: flex;
     align-items: center;
     margin: 1.5rem -10px;
 
     button {
-      background-color: #2C2E30;
+      background-color: #2c2e30;
       border-color: transparent;
       margin: 5px;
       border-radius: 4px;
       padding: 0.25rem 0.75rem;
       color: inherit;
+      outline: none;
+      cursor: pointer;
+      user-select: none;
+      font-size: 0.75rem;
+
+      &:focus {
+        background-color: black;
+      }
     }
+  }
+
+  .separator {
+    height: 2rem;
   }
 }

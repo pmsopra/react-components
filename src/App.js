@@ -1,11 +1,11 @@
 import React from 'react';
-import Box from './components/Box';
+import Tasks from './components/Tasks';
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      <Box />
+      <Tasks />
     </div>
   );
 }
