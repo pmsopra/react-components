@@ -2,6 +2,7 @@ $color: #dadada;
 
 .Box {
   width: 600px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
@@ -43,6 +44,7 @@ $color: #dadada;
     display: flex;
     align-items: center;
     margin: 1.5rem -10px;
+    flex-wrap: wrap;
 
     button {
       background-color: #2c2e30;
