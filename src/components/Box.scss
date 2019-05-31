@@ -6,6 +6,13 @@ $color: #dadada;
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
+  opacity: 1;
+
+  &.erasing {
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.2s;
+  }
 }
 
 .Box__header {
