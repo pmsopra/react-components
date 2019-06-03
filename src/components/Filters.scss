@@ -1,9 +1,22 @@
-@import '../variables';
+@import "../variables";
 
 .Filters {
-  position: fixed;
+  position: absolute;
   left: 2rem;
   max-width: 320px;
   min-width: 320px;
   color: $textColor;
+  margin-bottom: 30px;
+  overflow-y: auto;
+
+  @media (max-width: 1200px) {
+    position: relative;
+    min-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    left: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-sizing: border-box;
+  }
 }
