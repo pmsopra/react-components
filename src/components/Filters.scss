@@ -1,0 +1,9 @@
+@import '../variables';
+
+.Filters {
+  position: fixed;
+  left: 2rem;
+  max-width: 320px;
+  min-width: 320px;
+  color: $textColor;
+}
