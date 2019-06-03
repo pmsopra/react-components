@@ -8,6 +8,7 @@ $color: #dadada;
     opacity: 0;
     max-height: 0;
     margin-bottom: 0;
+    display: none;
   }
 } 
 
@@ -18,11 +19,14 @@ $color: #dadada;
   flex-direction: column;
   margin-bottom: 2rem;
   opacity: 1;
-  animation-duration: .2s;
+  animation-duration: .3s;
   animation-iteration-count: 1;
+  transition: .2s;
 
   &.erasing {
-    animation-name: erase;
+    opacity: 0;
+    max-height: 0;
+    margin-bottom: 0;
   }
 }
 
