@@ -3,15 +3,25 @@
 .Filters {
   position: absolute;
   left: 2rem;
-  max-width: 320px;
-  min-width: 320px;
   color: $textColor;
   margin-bottom: 30px;
-  overflow-y: auto;
+  min-width: 250px;
+  max-width: 250px;
+  background-color: #272829;
+  border-radius: $borderRadius;
+  padding: 1rem;
+  box-sizing: border-box;
+  opacity: 0.2;
+  transition: opacity .2s;
+
+  &:hover {
+    opacity: 1;
+  }
 
   @media (max-width: 1200px) {
     position: relative;
-    min-width: 600px;
+    width: 600px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     left: auto;
@@ -19,4 +29,38 @@
     padding-right: 1.5rem;
     box-sizing: border-box;
   }
+}
+
+.Filters__header {
+  input {
+    min-width: 100%;
+    border-radius: 8px;
+    box-shadow: none;
+    border-width: 0;
+    min-height: 24px;
+    background-color: #393b3c;
+    outline: none;
+    color: $textColor;
+    padding-left: 4px;
+  }
+}
+
+.Filters__body {
+  padding-top: 0.5rem;
+  box-sizing: border-box;
+
+  .selected {
+    color: white;
+  }
+}
+
+.Filters__filter {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0.8rem;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  user-select: none;
 }
