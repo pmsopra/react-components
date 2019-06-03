@@ -1,4 +1,15 @@
 $color: #dadada;
+@keyframes erase {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    max-height: 0;
+    margin-bottom: 0;
+  }
+} 
 
 .Box {
   width: 600px;
@@ -7,11 +18,11 @@ $color: #dadada;
   flex-direction: column;
   margin-bottom: 2rem;
   opacity: 1;
+  animation-duration: .2s;
+  animation-iteration-count: 1;
 
   &.erasing {
-    opacity: 0;
-    height: 0;
-    transition: opacity 0.2s;
+    animation-name: erase;
   }
 }
 

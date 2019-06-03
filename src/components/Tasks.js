@@ -4,7 +4,11 @@ import './Tasks.scss';
 import { tasks } from '../data';
 
 function onMake(event, id) {
-  event.target.closest('.Box').classList.add("erasing")
+  const $box = event.target.closest('.Box');
+  $box.classList.add("erasing");
+  setTimeout(() => {
+    $box.parentNode.removeChild($box);
+  }, 200);
 }
 
 function Tasks() {
