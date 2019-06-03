@@ -5,7 +5,10 @@ import { tasks } from '../data';
 
 function onMake(event, id) {
   const $box = event.target.closest('.Box');
+  const height = $box.clientHeight;
+  $box.style.maxHeight = height + 'px';
   $box.classList.add("erasing");
+
   setTimeout(() => {
     $box.parentNode.removeChild($box);
   }, 200);

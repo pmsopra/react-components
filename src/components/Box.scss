@@ -1,16 +1,4 @@
 $color: #dadada;
-@keyframes erase {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    max-height: 0;
-    margin-bottom: 0;
-    display: none;
-  }
-} 
 
 .Box {
   width: 600px;
@@ -19,13 +7,11 @@ $color: #dadada;
   flex-direction: column;
   margin-bottom: 2rem;
   opacity: 1;
-  animation-duration: .3s;
-  animation-iteration-count: 1;
-  transition: .2s;
+  transition: opacity .3s, max-height .3s, margin-bottom .3s;
 
   &.erasing {
     opacity: 0;
-    max-height: 0;
+    max-height: 0 !important;
     margin-bottom: 0;
   }
 }
@@ -52,6 +38,7 @@ $color: #dadada;
   border-color: #3e4040;
   box-sizing: border-box;
   color: #dddddd;
+
 
   h2 {
     margin-top: 0;
